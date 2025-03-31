@@ -1,0 +1,48 @@
+/* Personalización de Swiper */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: var(--primary);
+    transform: scale(1.2);
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    background: rgba(0, 102, 204, 0.8);
+    padding: 20px;
+    border-radius: 50%;
+    backdrop-filter: blur(2px);
+  }
+  
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  /* Transiciones personalizadas */
+  .swiper-slide-active {
+    z-index: 1;
+  }
+  
+  .swiper-slide-shadow-left,
+  .swiper-slide-shadow-right {
+    background-image: none !important;
+  }
