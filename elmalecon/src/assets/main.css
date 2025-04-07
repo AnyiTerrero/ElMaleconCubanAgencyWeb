@@ -1,0 +1,55 @@
+/* Variables globales */
+:root {
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --dark: #2d3436;
+  --light: #f8f9fa;
+  --transition: all 0.3s ease-in-out;
+}
+
+/* Estilos base */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.page-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('../img/header-bg.webp');
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+/* Transiciones */
+.fade-enter-active,
+.fade-leave-active {
+  transition: var(--transition);
+  max-height: 1000px;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+  max-height: 0;
+}
+
+/* Optimización de imágenes */
+.responsive-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.lazy-load {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lazy-load.loaded {
+  opacity: 1;
+}
